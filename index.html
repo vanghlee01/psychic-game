@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Psychic</title>
+</head>
+<link rel="stylesheet" href="./css/style.css">
+<script type="text/javascript">
+    //**display
+    //**wins start at zero
+    //*loses start at zero
+    //**guesses start at 9
+    //**display the results to users
+    //**how many letter users has made
+    //*computers choices
+    //*capture how much guesses are left
+    //**compare and then determine won, loses, and guesses
+    //**rest code
+    //WHAT CODE DO I USE FOR USER TO Guess the alphbets?? 
+    var alphaLetter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var win = 0;
+    var lose = 0;
+    var guess = 9;
+    var userGuess;
+    var letterTest;
+    document.onkeyup = function () {
+        var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+        
+        console.log(userGuess);
+        
+        if (userGuess == letterTest) {
+            console.log("YOU WIN");
+            
+        }
+        else {console.log ("you lose")};
+    }
+    function reset() {
+        var compGuess = Math.floor(Math.random() * alphaLetter.length)
+        var letterTest = alphaLetter[compGuess];
+        console.log(letterTest);
+
+    }
+    reset ();
+
+        // if ((userGuess == 'a') && (compGuess == 's')) {
+        //     win++;
+        //     alert("WINS" + win);
+    
+
+</script>
+
+<body>
+
+</body>
+
+</html>
